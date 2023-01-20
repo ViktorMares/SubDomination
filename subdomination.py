@@ -16,7 +16,7 @@ args = parser.parse_args()
 domain = args.domain
 
 print(f'{Fore.GREEN}\n[+] Enumerating subdomains of {domain}\n')
-cmd = f'assetfinder {domain} | sort | uniq'
+cmd = f'assetfinder {domain} | grep "{domain}" | sort | uniq '
 ps = subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
 output = ps.communicate()[0]
 
