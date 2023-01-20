@@ -4,7 +4,13 @@ SubDomination - Subdomain Enumeration. A simple Python script for Subdomain Enum
 The idea is very simple, use subdomain enumeration tools & add a little bit of functionality on top. The tool basically takes the output of a normal subdomain enumeration tool, it then removes all unnecessary subdomains (that do not belong to the requested domain) and sends a request to each one of them, to show you in a nice colored output, the status code for each one of them.
 
 
-# Usage
+# Installation & Usage
+```
+git clone https://github.com/ViktorMares/SubDomination.git
+```
+```
+cd SubDomination
+```
 ```
 chmod +x subdomination.py
 ```
