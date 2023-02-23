@@ -7,7 +7,7 @@ from colorama import Fore
 
 parser = argparse.ArgumentParser(description='A simple script to enumerate & probe subdomains')
 
-#Add a required command-line argument. -C 'city name' to specify the city we want to scrape
+#Add a required command-line argument. -D 'domain name' to specify the domain we want to enumerate
 requiredNamed = parser.add_argument_group('required arguments')
 requiredNamed.add_argument('-d','--domain', help='Specify a domain that you would like to enumerate',type=str, required=True)
 args = parser.parse_args()
