@@ -15,7 +15,7 @@ args = parser.parse_args()
 
 domain = args.domain
 
-print(f'\n{Fore.MAGENTA}[+] Enumerating subdomains of {Back.WHITE}{Style.BRIGHT}{domain}\n{Style.RESET_ALL}')
+print(f'\n{Fore.MAGENTA}[+] Enumerating subdomains of {Back.WHITE}{Style.BRIGHT}{domain}{Style.RESET_ALL}\n')
 
 # Use Sublist3r to enumerate subdomains
 sublist3r_cmd = f'sublist3r -d {domain}'
@@ -42,9 +42,9 @@ for subd in combined_output.split('\n'):
 # Sort subdomains alphabetically
 subdomains = sorted(subdomains)
 
-print(f'{Fore.MAGENTA}[+] Found {len(subdomains)} unique subdomain(s) for {domain}\n{Style.RESET_ALL}')
+print(f'{Fore.MAGENTA}[+] Found {len(subdomains)} unique subdomain(s) for {domain}{Style.RESET_ALL}\n')
 
-print(f'{Fore.MAGENTA}[+] Testing the connection to each subdomain\n{Style.RESET_ALL}')
+print(f'{Fore.MAGENTA}[+] Testing the connection to each subdomain{Style.RESET_ALL}\n')
 
 
 # Check status code
@@ -72,9 +72,5 @@ for subdomain in subdomains:
 # Wait for all threads to finish
 for t in threads:
     t.join()
-
-
-# Sort alphabetically (will depend on server response)
-threads = sorted(threads)
 
 print(f'\n{Fore.MAGENTA}[+] All subdomains tested{Style.RESET_ALL}')
